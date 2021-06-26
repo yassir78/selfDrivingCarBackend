@@ -27,6 +27,7 @@ export class Server {
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
     next();
 });
+this.app.use(cors();)
   }
 
   private createServer(): void {
