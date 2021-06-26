@@ -32,7 +32,7 @@ export class Server {
   }
 
   private sockets(): void {
-    this.io = require("socket.io").listen(this.server, { origins: "*:*" });
+    this.io = require("socket.io").listen(this.server,{pingTimeout: 0, pingInterval: 500, origins: '*:*'});
   }
 
   private listen(): void {
